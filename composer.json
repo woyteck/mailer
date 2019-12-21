@@ -12,7 +12,8 @@
     "require": {
         "php": ">=7.4",
         "ext-PDO": "^7.4",
-        "woyteck/db": "dev-master"
+        "woyteck/db": "dev-master",
+        "zendframework/zend-mail": "^2.10"
     },
     "autoload": {
         "psr-4": {
