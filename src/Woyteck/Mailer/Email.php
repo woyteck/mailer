@@ -19,13 +19,10 @@ class Email
     private ?string $encoding = null;
     private ?string $contentsPlain = null;
     private ?string $contentsHtml = null;
-
-    /**
-     * @var Attachment[]
-     */
+    /** @var array Attachment[] */
     private array $attachments = [];
-    private ?string $context;
-    private ?int $contextIdentifier;
+    private ?string $context = null;
+    private ?int $contextIdentifier = null;
 
     public function getAuthors(): array
     {
