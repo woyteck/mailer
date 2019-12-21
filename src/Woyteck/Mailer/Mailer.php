@@ -132,9 +132,11 @@ class Mailer
             $message->addFrom($author['address'], isset($author['label']) ? $author['label'] : null);
         }
 
-        $replyTo = json_decode($email->reply_to, true);
-        if (isset($replyTo[self::STRING_ADDRESS])) {
-            $message->setReplyTo($replyTo[self::STRING_ADDRESS], isset($replyTo[self::STRING_LABEL]) ? $replyTo[self::STRING_LABEL] : null);
+        if ($email->reply_to !== null) {
+            $replyTo = json_decode($email->reply_to, true);
+            if (isset($replyTo[self::STRING_ADDRESS])) {
+                $message->setReplyTo($replyTo[self::STRING_ADDRESS], isset($replyTo[self::STRING_LABEL]) ? $replyTo[self::STRING_LABEL] : null);
+            }
         }
 
         $recipients = json_decode($email->recipients, true);
