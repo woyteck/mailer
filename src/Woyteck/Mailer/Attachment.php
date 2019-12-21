@@ -9,11 +9,11 @@ class Attachment
     const DISPOSITION_ATTACHMENT = 'attachment';
     const DISPOSITION_INLINE = 'inline';
 
-    public ?string $mimeType;
-    public ?string $charset;
+    public ?string $mimeType = null;
+    public ?string $charset = null;
     public ?string $encoding = self::ENCODING_BASE64;
     public ?string $disposition = self::DISPOSITION_ATTACHMENT;
-    public ?string $filename;
-    public ?string $contentId;
-    public ?string $contents;
+    public ?string $filename = null;
+    public ?string $contentId = null;
+    public ?string $contents = null;
 }

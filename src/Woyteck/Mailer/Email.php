@@ -15,10 +15,10 @@ class Email
     private array $cc = [];
     private array $bcc = [];
     private array $replyTo = [];
-    private ?string $subject;
-    private ?string $encoding;
-    private ?string $contentsPlain;
-    private ?string $contentsHtml;
+    private ?string $subject = null;
+    private ?string $encoding = null;
+    private ?string $contentsPlain = null;
+    private ?string $contentsHtml = null;
 
     /**
      * @var Attachment[]
