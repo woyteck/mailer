@@ -11,7 +11,8 @@
     "license": "MIT",
     "require": {
         "php": ">=7.4",
-        "ext-PDO": "^7.4"
+        "ext-PDO": "^7.4",
+        "woyteck/db": "dev-master"
     },
     "autoload": {
         "psr-4": {
